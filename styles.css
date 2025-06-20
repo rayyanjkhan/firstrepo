@@ -1,42 +1,23 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/*
+    This CSS file is for any additional custom styles or overrides
+    that are not handled by Tailwind CSS directly in the HTML.
+    Most of the visual styling for the layout, spacing, colors, etc.,
+    is applied using Tailwind classes in the HTML.
+*/
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+/* Example: You can define custom fonts here if you prefer not to import in HTML head directly */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap'); */
 
-.container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 400px;
-}
+/*
+    Basic body styles are already in the HTML's <style> tag to ensure they load quickly.
+    You can add more specific overrides here if needed.
+*/
 
-.profile-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.intro h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.intro p {
-    font-size: 1em;
-    color: #666;
-}
+/*
+    Example of a custom style you might add:
+    .profile-card:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    Note: A similar effect is already applied using Tailwind's 'shadow-xl' and 'hover:scale-105'
+    for transformation, so this is just an illustrative example of what could go here.
+*/

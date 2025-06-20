@@ -3,20 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Personal Bio</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to your custom CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles not easily covered by Tailwind or for global overrides */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="profile-image">
-            <img src="OIP.jpg" alt="My Photo" id="profilePic">
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="profile-card bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
+        <!-- Profile Image -->
+        <div class="mb-6">
+            <img
+                src="https://placehold.co/150x150/22c55e/ffffff?text=Your+Image"
+                alt="Your Profile Picture"
+                class="w-36 h-36 rounded-full mx-auto object-cover border-4 border-green-500 shadow-lg"
+                onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/000000?text=Image+Not+Found';"
+            >
         </div>
-        <div class="intro">
-            <h1 id="name">RJK MAPS</h1>
-            <p id="description">Hi! I am a site making academic progress simple, accessible on https://rjk.is-a.dev.</p>
+
+        <!-- Name -->
+        <h1 class="text-4xl font-bold text-gray-800 mb-3">Your Name Here</h1>
+
+        <!-- Bio Text -->
+        <p class="text-lg text-gray-600 leading-relaxed">
+            Hello there! I'm a passionate individual with a keen interest in web development and creating engaging digital experiences. I enjoy learning new technologies and bringing ideas to life through code. When I'm not coding, you can find me exploring new places or delving into a good book.
+        </p>
+
+        <p class="text-lg text-gray-600 leading-relaxed">this is my new paragraph</p>
+
+        <!-- Contact Me Button -->
+        <button id="contact-button" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105">
+            Show Contact Info
+        </button>
+
+        <!-- Contact Information Section (initially hidden) -->
+        <div id="contact-info-section" class="mt-6 text-left p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-700 mb-3">Contact Details</h3>
+            <p class="text-md text-gray-600 mb-2"><strong class="text-gray-800">Phone:</strong> +1 (123) 456-7890</p>
+            <p class="text-md text-gray-600 mb-2"><strong class="text-gray-800">Email:</strong> your.email@example.com</p>
+            <p class="text-md text-gray-600"><strong class="text-gray-800">Address:</strong> 123 Web Dev Street, City, Country</p>
         </div>
+
+        <!-- Dynamic Footer (will be updated by JavaScript) -->
+        <footer class="mt-8 text-sm text-gray-500">
+            &copy; <span id="current-year"></span> Your Name. All rights reserved.
+        </footer>
     </div>
 
-    <script src="scripts.js"></script>
+    <!-- Link to your custom JavaScript file -->
+    <script src="index.js"></script>
 </body>
 </html>
